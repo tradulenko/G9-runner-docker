@@ -4,7 +4,7 @@ pipeline{
 
     parameters {
       choice choices: ['chrome', 'firefox'], description: 'Choose the browser', name: 'BROWSER'
-      choice choices: ['aqa', 'qa'], description: 'Choose the Env for tests', name: 'ENVS'
+      choice choices: ['aqa', 'qa'], description: 'Choose the Env for tests', name: 'ENV'
     }
 
     stages{
