@@ -25,7 +25,7 @@ pipeline{
                 expression { return !params.SKIP_STAGES }
             }
             steps{
-                sh 'docker-compose -f tests.yaml up'
+                sh 'docker-compose -f tests.yaml up --pull=always'
             }
        }
     }
