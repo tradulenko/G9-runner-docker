@@ -7,7 +7,7 @@ services:
       - BROWSER=remote
       - ENV=aqa
       - SELENIUM_HUB_HOST=hub
-      - SUITES=suits.RegressionSuite
+      - SUITES=suits.OneTestSuite
       - THREAD_COUNT=4
     volumes:
       - ./allure-results/test:/home/selemium-docker/allure-results
