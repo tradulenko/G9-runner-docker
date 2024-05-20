@@ -30,22 +30,21 @@ pipeline{
 
     post{
         always{
-            when {
-                expression { return !params.SKIP_STAGES }
-            }
-            steps{
-                sh 'docker-compose -f tests.yaml down'
-                sh 'docker-compose -f grid.yaml down'
-                archiveArtifacts artifacts: 'allure-results/**', followSymlinks: false
+            script {
+                if (!params.SKIP_STAGES) {
+                    sh 'docker-compose -f tests.yaml down'
+                    sh 'docker-compose -f grid.yaml down'
+                    archiveArtifacts artifacts: 'allure-results/**', followSymlinks: false
 
-                // Generate the Allure report
-                allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'allure-results/**']]
-                ])
+                    // Generate the Allure report
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'allure-results/**']]
+                    ])
+                }
             }
         }
     }
