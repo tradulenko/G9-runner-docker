@@ -2,6 +2,14 @@ pipeline{
 
     agent any
 
+    parameters {
+      choice choices: ['chrome', 'firefox'], description: 'Choose the browser', name: 'BROWSER'
+    }
+
+    parameters {
+      choice choices: ['aqa', 'qa'], description: 'Choose the Env for tests', name: 'ENVS'
+    }
+
     stages{
         stage('Start Grid'){
             steps{

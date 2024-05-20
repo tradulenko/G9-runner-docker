@@ -5,7 +5,7 @@ services:
     image: radulenko/selenium:latest
     environment:
       - BROWSER=remote
-      - ENV=aqa
+      - ENV
       - SELENIUM_HUB_HOST=hub
       - SUITES=suits.OneTestSuite
       - THREAD_COUNT=4
