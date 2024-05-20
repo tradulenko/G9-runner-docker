@@ -7,7 +7,7 @@ services:
       - BROWSER=remote
       - ENV
       - SELENIUM_HUB_HOST=hub
-      - SUITES=suits.OneTestSuite
+      - SUITES
       - THREAD_COUNT=4
     volumes:
       - ./allure-results/test:/home/selemium-docker/allure-results

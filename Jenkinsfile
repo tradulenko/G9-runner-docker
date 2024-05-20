@@ -5,6 +5,8 @@ pipeline{
     parameters {
       choice choices: ['chrome', 'firefox'], description: 'Choose the browser', name: 'BROWSER'
       choice choices: ['aqa', 'qa'], description: 'Choose the Env for tests', name: 'ENV'
+      string defaultValue: 'suits.OneTestSuite', description: '''suits.SmokeSuite
+        suits.RegressionSuite''', name: 'SUITES', trim: true
       booleanParam(defaultValue: false, description: 'Check this to skip stages', name: 'SKIP_STAGES')
     }
 
