@@ -44,6 +44,8 @@ pipeline{
                         reportBuildPolicy: 'ALWAYS',
                         results: [[path: 'allure-results/**']]
                     ])
+                } else {
+                    currentBuild.displayName += " (stages skipped)"
                 }
             }
         }
