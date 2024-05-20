@@ -2,7 +2,7 @@ version: "3"
 services:
 
   tests:
-    image: radulenko/overall-tests
+    image: radulenko/selenium:latest
     environment:
       - BROWSER=remote
       - ENV=aqa
