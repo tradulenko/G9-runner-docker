@@ -12,13 +12,13 @@ services:
     volumes:
       - ./allure-results/test:/home/selemium-docker/allure-results
 
-  tests2:
-    image: radulenko/overall-tests
-    environment:
-      - BROWSER=remote
-      - ENV=aqa
-      - SELENIUM_HUB_HOST=hub
-      - SUITES=suits.SmokeSuite
-      - THREAD_COUNT=4
-    volumes:
-      - ./allure-results/test2:/home/selemium-docker/allure-results
+#  tests2:
+#    image: radulenko/overall-tests
+#    environment:
+#      - BROWSER=remote
+#      - ENV=aqa
+#      - SELENIUM_HUB_HOST=hub
+#      - SUITES=suits.SmokeSuite
+#      - THREAD_COUNT=4
+#    volumes:
+#      - ./allure-results/test2:/home/selemium-docker/allure-results

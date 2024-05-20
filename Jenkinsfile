@@ -22,6 +22,7 @@ pipeline{
         always{
             sh 'docker-compose -f tests.yaml down'
             sh 'docker-compose -f grid.yaml down'
+            archiveArtifacts artifacts: 'index.html', followSymlinks: false
         }
     }
 }
