@@ -3,8 +3,6 @@ services:
 
   tests:
     image: radulenko/overall-tests
-    depends_on:
-      - chrome
     environment:
       - BROWSER=remote
       - ENV=aqa
