@@ -6,7 +6,7 @@ services:
       - "4444:4444"
   chrome:
     image: seleniarm/node-chromium:4.16
-    shm_size: '2g'
+    shm_size: '1g'
     depends_on:
       - hub
     deploy:
@@ -14,7 +14,7 @@ services:
     env_file: .env
   firefox:
     image: seleniarm/node-firefox:4.16
-    shm_size: '2g'
+    shm_size: '1g'
     depends_on:
       - hub
     deploy:

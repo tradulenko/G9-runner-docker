@@ -8,7 +8,7 @@ services:
       - ENV
       - SELENIUM_HUB_HOST=hub
       - SUITES
-      - THREAD_COUNT=4
+      - THREAD_COUNT=2
     volumes:
       - ./allure-results/test:/home/selemium-docker/allure-results
 
