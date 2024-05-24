@@ -10,7 +10,7 @@ services:
       - SUITES
       - THREAD_COUNT=2
     volumes:
-      - ./Users/taras/Desktop/WorkSpace/G9/G9-TAF/G9_Project/overAll/jenkins/node/workspace/RUN_TESTS_ON_GRID/allure-results/test:/home/selemium-docker/allure-results
+      - ./allure-results/test:/home/selemium-docker/allure-results
 
 #  tests2:
 #    image: radulenko/overall-tests
